@@ -7,4 +7,8 @@ angular.module('myApp',[]).controller('MyCtrl' , ['$scope', function($scope){
         {'tagname':'モンハン'},
         {'tagname':'モンスト'}
     ];
+
+    $scope.ClickFunction = function(val) {
+   angular.element(document.querySelector('#value')).text(val);
+ }
 }]);
