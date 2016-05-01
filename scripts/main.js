@@ -12,9 +12,10 @@ angular.module('myApp',[]).controller('MyCtrl' , ['$scope', function($scope){
         {'tagname':'Java'}
     ];
 
-
+    $scope.selectTag = "";
     $scope.ClickFunction = function(val) {
-        angular.element(document.querySelector('#clicktag')).val(val);
+        // angular.element(document.querySelector('#clicktag')).val(val);
         //angular.element()内ではある程度のJqueryが使えるすごい
+        $scope.selectTag = val;
  }
 }]);

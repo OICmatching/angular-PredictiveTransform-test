@@ -9,10 +9,12 @@
 <body>
     <div ng-controller="MyCtrl">
         <div class="search">
-        Search: <input ng-model="query" id="clicktag" ng-value={{query}}>
+        <!-- Search: <input ng-model="query" id="clicktag" ng-value={{query}}> -->
+        Search: <input ng-model="selectTag" id="clicktag">
         </div>
         <ul class="tags">
-          <li ng-repeat="tag in tags | filter:query">
+          <!-- <li ng-repeat="tag in tags | filter:query"> -->
+          <li ng-repeat="tag in tags | filter:selectTag">
             <span ng-click='ClickFunction(tag.tagname)'>{{tag.tagname}}</span>
           </li>
         </ul>
