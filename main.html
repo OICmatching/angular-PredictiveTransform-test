@@ -9,7 +9,7 @@
 <body>
     <div ng-controller="MyCtrl">
         <div class="search">
-        Search: <input ng-model="query" ><span id="value"></span>
+        Search: <input ng-model="query" id="clicktag" ng-value={{query}}>
         </div>
         <ul class="tags">
           <li ng-repeat="tag in tags | filter:query">

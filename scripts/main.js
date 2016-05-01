@@ -5,10 +5,16 @@ angular.module('myApp',[]).controller('MyCtrl' , ['$scope', function($scope){
         {'tagname':'プログラム'},
         {'tagname':'デザイン'},
         {'tagname':'モンハン'},
-        {'tagname':'モンスト'}
+        {'tagname':'モンスト'},
+        {'tagname':'JQuery'},
+        {'tagname':'AngularJS'},
+        {'tagname':'Javascript'},
+        {'tagname':'Java'}
     ];
 
+
     $scope.ClickFunction = function(val) {
-   angular.element(document.querySelector('#value')).text(val);
+        angular.element(document.querySelector('#clicktag')).val(val);
+        //angular.element()内ではある程度のJqueryが使えるすごい
  }
 }]);
