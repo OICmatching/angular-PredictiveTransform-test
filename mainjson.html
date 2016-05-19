@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Angularの練習</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/mainjson.js"></script>
+    <script src="scripts/jsonapi.js"></script>
+</head>
+<body>
+    <div ng-controller="MyCtrl">
+        <div class="search">
+        Search: <input ng-model="selectTag" id="clicktag">
+        <button ng-click="test()">getData</button>
+        </div>
+
+        <ul class="tags">
+          <li ng-repeat="tag in tags | filter:selectTag">
+            <span ng-click='ClickFunction(tag.tagname)'>{{tag.tagname}}</span>
+          </li>
+        </ul>
+    </div>
+</body>
+</html>
